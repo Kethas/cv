@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <title>Ilay Ron - Self-Taught Programmer</title>
+    
+    <!-- CSS -->
+    <link data-trunk rel="sass" href="index.scss" />
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet'>
+
+    <script>
+      // this has to be javascript otherwise it's a chicken and egg game in rust...
+      setTimeout(() => {
+        let col2 = document.getElementsByClassName("zero-opacity")[0];
+        if (col2 == null) {
+          return
+        }
+        
+        let options = {
+          threshold: 0.05,
+        };
+
+        let observer = new IntersectionObserver((entries) => {
+          if (entries[0].isIntersecting) {
+            col2.classList.remove("zero-opacity");
+            col2.classList.add("appear3");
+            observer.disconnect();
+          }
+        }, options);
+
+        observer.observe(col2);
+      }, 500);
+    </script>
+  </head>
+</html>

@@ -1,0 +1,23 @@
+[package]
+name = "ilay-ron-cv"
+version = "0.1.0"
+edition = "2021"
+readme = "README.md"
+repository = "https://github.com/kethas/cv"
+license = "MIT OR Apache-2.0"
+
+[lib]
+crate-type = ["rlib", "cdylib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+yew = { version = "0.20", features = ["csr"] }
+web-sys = { version = "*", features = [
+    "DomRect",
+    "Element",
+    "HtmlDivElement",
+    "DomTokenList",
+    "IntersectionObserver",
+    "IntersectionObserverInit",
+] }
+wasm-bindgen = { version = "*" }

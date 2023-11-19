@@ -1,0 +1,304 @@
+$blue-accent: rgb(32, 121, 199);
+$orange-accent: rgb(230, 145, 56);
+
+$font-size: 3.75mm;
+
+html {
+  font-size: 3.75mm;
+  font-family: 'Bitter', serif;
+  color: #222;
+}
+
+body {
+  margin: 0;
+}
+
+@page {
+  size: 21cm 29.7cm;
+  margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .print-only {
+    display: none !important;
+  }
+
+  html {
+    font-size: 5vw !important;
+  }
+
+  body {
+    display: block !important;
+    width: 100%;
+    height: 100%;
+  }
+
+  .page {
+    width: 100%;
+
+    height: auto;
+  }
+
+  .cv {
+    display: block !important;
+    gap: 0;
+  }
+
+  .name {
+    font-size: 18vw !important;
+  }
+
+  .headline {
+    font-size: 7vw !important;
+  }
+
+  .contact-datum span.link {
+    display: none !important;
+  }
+
+  h1 {
+    font-size: 6vw! important;
+  }
+
+  h2 {
+    font-size: 5vw! important;
+  }
+
+  div.subtitle {
+    font-size: 4.5vw !important;
+  }
+
+  .footer {
+    display: block !important;
+    font-size: 4mm;
+    margin: auto;
+    width: 50%;
+    margin-bottom: 1cm;
+    text-align: center;
+
+    span.bullet:after {
+      content: "" !important;
+    }
+  }
+
+  .appear3 {
+    animation-delay: 0s !important;
+  }
+}
+
+
+@media only screen and (min-width: 600px) {
+  .print-only {
+    display: none !important;
+  }
+
+  body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    background: linear-gradient(to bottom right, rgb(100, 130, 220), rgb(50, 90, 200));
+  } 
+
+  .page {
+    width: 21cm;
+    height: 29.7cm;
+
+    margin: 1cm 0cm;
+    background: white;
+    border: 0.1mm solid black;
+  } 
+
+  
+}
+
+@media screen {
+  @keyframes type {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  .appear0 {
+    width: 0%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: type 1.3s steps(120, end);
+    animation-fill-mode: forwards;
+  }
+
+  .appear1 {
+    width: 0%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: type 1.2s steps(120, end);
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes opac {
+    from {
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+
+  .zero-opacity {
+    opacity: 0%;
+  }
+
+  .appear2 {
+    opacity: 0%;
+
+    animation: opac 0.85s steps(120, end);
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+  }
+
+  .appear3 {
+    opacity: 0%;
+
+    animation: opac 0.85s steps(120, end);
+    animation-delay: 1.6s;
+    animation-fill-mode: forwards;
+  }
+ 
+}
+
+@media print {
+  .screen-only {
+    display: none !important;
+  }
+
+  .page {
+    width: 21cm;
+    height: 29.7cm;
+  }
+
+  a, a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+
+.page {
+  page-break-inside: always;
+
+}
+
+.page-content {
+  padding: 1cm 0.1cm;
+}
+
+.cv {
+  display: flex;
+  gap: 0.25cm;
+
+  padding: 0.2cm 1cm;
+}
+
+.col {
+  width: 100%;
+}
+
+.name {
+
+  font-size: 2cm;
+  font-family: 'Merriweather', serif;
+
+  color: $blue-accent;
+}
+
+.headline {
+  color: #444;
+  font-size: 5mm;
+  font-family: 'Vollkorn', serif;
+}
+
+.contact-datum {
+  color: #858585;
+  font-family: 'Merriweather', serif;
+
+  span.link:before {
+    content: " ";
+  }
+}
+
+
+.skills-container {
+  display: flex;
+  width: 100%;
+}
+
+.skills-col {
+  width: 50%;
+}
+
+ul.skills-list {
+  margin-top: 1mm;
+  margin-bottom: 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.bullet-points {
+  margin-top: 1mm;
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+
+h1 {
+  text-transform: uppercase;
+  color: $orange-accent;
+  font-size: 5mm;
+  font-family: 'Calibri', sans-serif;
+  margin-top: 4mm;
+  margin-bottom: 0mm;
+}
+
+h2 {
+  text-transform: uppercase;
+  color: $blue-accent;
+  font-size: 4.5mm;
+  font-family: 'Calibri', sans-serif;
+  margin-top: 1mm;
+  margin-bottom: 0mm;
+}
+
+div.subtitle {
+  font-size: 3.8mm;
+  font-family: 'Calibri', sans-serif;
+  font-style: italic;
+
+  color: #858585;
+
+}
+
+p {
+  margin-top: 2mm;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+
+  font-size: 5mm;
+  margin-bottom: 1cm;
+
+  .bullet:after {
+    margin-left: 3mm;
+    margin-right: 3mm;
+    content: "\2022";
+  }
+
+  a, a:visited {
+    color: #222
+  }
+}
