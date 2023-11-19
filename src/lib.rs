@@ -73,7 +73,7 @@ pub fn contact_info() -> Html {
 
             <div class="contact-datum"><a href="https://www.linkedin.com/in/Kethas">{ "LinkedIn" } <span class="link">{ "(https://www.linkedin.com/in/Kethas)" }</span></a></div>
             <div class="contact-datum"><a href="https://github.com/Kethas">{ "GitHub" } <span class="link">{ "(https://github.com/Kethas)" }</span></a></div>
-            <div class="contact-datum print-only"><a href="https://portfolio.asphyx.dev">{ "Portfolio"}<span class="link">{ "(https://portfolio.asphyx.dev)" }</span></a></div>
+            //<div class="contact-datum print-only"><a href="https://portfolio.asphyx.dev">{ "Portfolio"}<span class="link">{ "(https://portfolio.asphyx.dev)" }</span></a></div>
 
 
         </>
@@ -270,9 +270,10 @@ pub fn projects() -> Html {
 pub fn footer() -> Html {
     html! {
         <div class="footer screen-only">
-            <div><a href="#">{ "Source Code on Github" }</a></div>
-            <span class="bullet" />
-            <div><a href="#">{ "View my Portfolio" }</a></div>
+            <div><a href="https://github.com/Kethas/cv/">{ "Source Code on Github" }</a></div>
+
+            //<span class="bullet" />
+            //<div><a href="#">{ "View my Portfolio" }</a></div>
         </div>
     }
 }
