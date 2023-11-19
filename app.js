@@ -1,18 +1,14 @@
 // Serve the Dist folder
-
 let express = require('express');
 
 let path = require('path');
 
-app = express();
+let app = express();
 
-app.configure(function(){
-    app.use(express.bodyParser());
-    app.use(express.static(path.join(__dirname, 'dist')));
-});
+app.use('/', express.static(path.join(__dirname, 'dist')));
 
-let port = process.env.PORT || 5000;
+let port = process.env.PORT || 80;
 
 app.listen(port);
 
-console.log('server started ' + port);
+console.log('Server started on port ' + port);
