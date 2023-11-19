@@ -18,7 +18,7 @@ body {
   margin: 0;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   .print-only {
     display: none !important;
   }
@@ -87,7 +87,7 @@ body {
 }
 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   .print-only {
     display: none !important;
   }
