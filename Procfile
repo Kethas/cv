@@ -1,1 +1,1 @@
-web: trunk serve
+web: node app.js
