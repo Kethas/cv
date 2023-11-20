@@ -1,5 +1,7 @@
 # Hi, I'm Ilay Ron
 
+![screenshot](screenshot.png "Screenshot of cv.asphyx.dev")
+
 [See my CV here](https://cv.asphyx.dev/)
 
 This is the source code for it.
