@@ -17,9 +17,9 @@
     <script>
       // this has to be javascript otherwise it's a chicken and egg game in rust...
       setTimeout(() => {
-        let col2 = document.getElementsByClassName("zero-opacity")[0];
-        if (col2 == null) {
-          return
+        let elems = document.getElementsByClassName("zero-opacity");
+        if (!elems) {
+          return;
         }
         
         let options = {
@@ -27,14 +27,17 @@
         };
 
         let observer = new IntersectionObserver((entries) => {
-          if (entries[0].isIntersecting) {
-            col2.classList.remove("zero-opacity");
-            col2.classList.add("appear3");
-            observer.disconnect();
+          for (let entry of entries) {
+            if (entry.isIntersecting) {
+              let target = entry.target;
+              target.classList.remove("zero-opacity");
+              target.classList.add("appear3");
+            }
           }
         }, options);
 
-        observer.observe(col2);
+        
+        for (elem of elems) observer.observe(elem);
       }, 500);
     </script>
   </head>

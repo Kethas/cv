@@ -1,4 +1,4 @@
-use yew::prelude::*;
+use yew::{prelude::*, props};
 
 #[function_component(App)]
 pub fn app() -> Html {
@@ -15,6 +15,11 @@ pub fn app() -> Html {
     }
 }
 
+#[derive(Copy, Clone, Properties, PartialEq)]
+pub struct MobileProps {
+    is_mobile: bool,
+}
+
 #[function_component(Cv)]
 pub fn cv() -> Html {
     let inner_width = web_sys::window()
@@ -26,21 +31,27 @@ pub fn cv() -> Html {
 
     let is_mobile = inner_width <= 700.0;
 
+    let props = props! {
+        MobileProps {
+            is_mobile
+        }
+    };
+
     html! {
         <div class="cv">
             <div class="col">
                 <Intro />
-                <div class="appear2">
-                    <ContactInfo />
-                    <AboutMe />
-                    <Skills />
-                    <Education />
+                <div class={ if !is_mobile { "appear2" } else { "" } }>
+                    <ContactInfo ..props />
+                    <AboutMe ..props />
+                    <Skills ..props />
+                    <Education  ..props />
                 </div>
             </div>
             <div class="col">
-                <div class={ if !is_mobile { "appear3" } else { "zero-opacity" } }>
-                    <Experience />
-                    <Projects />
+                <div class={ if !is_mobile { "appear3" } else { "" } }>
+                    <Experience ..props />
+                    <Projects ..props />
                 </div>
             </div>
         </div>
@@ -64,9 +75,9 @@ pub fn intro() -> Html {
 }
 
 #[function_component(ContactInfo)]
-pub fn contact_info() -> Html {
+pub fn contact_info(props: &MobileProps) -> Html {
     html! {
-        <>
+        <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
             <div class="contact-datum">{ "ilayron01@gmail.com" }</div>
             <div class="contact-datum">{ "+45 91 44 49 12" }</div>
             <div class="contact-datum">{ "Copenhagen, Denmark" }</div>
@@ -76,14 +87,14 @@ pub fn contact_info() -> Html {
             //<div class="contact-datum print-only"><a href="https://portfolio.asphyx.dev">{ "Portfolio"}<span class="link">{ "(https://portfolio.asphyx.dev)" }</span></a></div>
 
 
-        </>
+        </div>
     }
 }
 
 #[function_component(AboutMe)]
-pub fn about_me() -> Html {
+pub fn about_me(props: &MobileProps) -> Html {
     html! {
-        <>
+        <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
             <h1>{ "About Me" }</h1>
             <p>
                 {
@@ -102,14 +113,14 @@ pub fn about_me() -> Html {
                     I'm genuinely motivated and committed to personal growth, always seeking opportunities to learn, reflect, and enhance my abilities."
                 }
             </p>
-        </>
+        </div>
     }
 }
 
 #[function_component(Skills)]
-pub fn skills() -> Html {
+pub fn skills(props: &MobileProps) -> Html {
     html! {
-        <>
+        <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
             <h1>{ "Skills" }</h1>
             <div class="skills-container">
                 <div class="skills-col">
@@ -147,19 +158,19 @@ pub fn skills() -> Html {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     }
 }
 
 #[function_component(Education)]
-pub fn education() -> Html {
+pub fn education(props: &MobileProps) -> Html {
     html! {
-        <>
+        <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
             <h1>{ "Education" }</h1>
             <h2>{ "International Baccalaureate (IB)" }</h2>
             <div class="subtitle">{ "Copenhagen International School 2018-2020" }</div>
             <p>{ "Including Higher Level Computer Science, Math and Physics" }</p>
-        </>
+        </div>
     }
 }
 
@@ -170,12 +181,12 @@ pub fn education() -> Html {
 */
 
 #[function_component(Experience)]
-pub fn experience() -> Html {
+pub fn experience(props: &MobileProps) -> Html {
     html! {
         <>
-            <h1>{ "Experience" }</h1>
+            <h1 class={ if props.is_mobile { "zero-opacity" } else { "" } }>{ "Experience" }</h1>
 
-            <div>
+            <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
                 <h2>{ "Freelance Software Developer \u{2014} International Clients" }</h2>
                 <div class="subtitle">{ "April 2021 - Present / Remote / Self-Employed" }</div>
                 <ul class="bullet-points">
@@ -206,12 +217,12 @@ pub fn experience() -> Html {
 }
 
 #[function_component(Projects)]
-pub fn projects() -> Html {
+pub fn projects(props: &MobileProps) -> Html {
     html! {
         <>
-            <h1>{ "Projects" }</h1>
+            <h1 class={ if props.is_mobile { "zero-opacity" } else { "" } }>{ "Projects" }</h1>
 
-            <div>
+            <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
                 <h2>{ "Moinkroft" }</h2>
                 <div class="subtitle">{ "Minecraft Clone written in Rust + WGPU" }</div>
                 <ul class="bullet-points">
@@ -228,7 +239,7 @@ pub fn projects() -> Html {
                 </ul>
             </div>
 
-            <div>
+            <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
                 <h2>{ "RailsPlus" }</h2>
                 <div class="subtitle">{ "Minecraft Mod with over 150 000 downloads" }</div>
                 <ul class="bullet-points">
@@ -240,7 +251,7 @@ pub fn projects() -> Html {
                 </ul>
             </div>
 
-            <div>
+            <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
                 <h2>{ "Psi" }</h2>
                 <div class="subtitle">{ "User Friendly parser written in Rust" }</div>
                 <ul class="bullet-points">
