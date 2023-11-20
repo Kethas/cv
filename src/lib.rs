@@ -124,19 +124,27 @@ pub fn skills(props: &MobileProps) -> Html {
             <h1>{ "Skills" }</h1>
             <div class="skills-container">
                 <div class="skills-col">
-                    <h2>{ "Languages" }</h2>
-                    <ul class="skills-list">
-                        <li>{ "Lua" }</li>
-                        <li>{ "Java" }</li>
-                        <li>{ "C#" }</li>
-                        <li>{ "C/C++" }</li>
-                        <li>{ "Rust" }</li>
-                        <li>{ "JavaScript/\u{200B}TypeScript" }</li>
-                        <li>{ "HTML" }</li>
-                        <li>{ "CSS" }</li>
-                        <li>{ "NodeJS" }</li>
-                        <li>{ "Python" }</li>
-                    </ul>
+                    <div>
+                        <h2>{ "Languages" }</h2>
+                        <ul class="skills-list">
+                            <li>{ "Lua" }</li>
+                            <li>{ "Java" }</li>
+                            <li>{ "C#" }</li>
+                            <li>{ "C/C++" }</li>
+                            <li>{ "Rust" }</li>
+                            <li>{ "JavaScript/\u{200B}TypeScript" }</li>
+                            <li>{ "HTML" }</li>
+                            <li>{ "CSS" }</li>
+                            <li>{ "NodeJS" }</li>
+                            <li>{ "Python" }</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>{ "Cloud Platforms" }</h2>
+                        <ul class="skills-list">
+                            <li>{ "Heroku" }</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="skills-col">
                     <div>
@@ -153,7 +161,6 @@ pub fn skills(props: &MobileProps) -> Html {
                         <ul class="skills-list">
                             <li>{ "MongoDB" }</li>
                             <li>{ "SQL" }</li>
-
                         </ul>
                     </div>
                 </div>
