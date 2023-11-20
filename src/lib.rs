@@ -24,7 +24,7 @@ pub fn cv() -> Html {
         .as_f64()
         .unwrap();
 
-    let is_mobile = inner_width <= 600.0;
+    let is_mobile = inner_width <= 700.0;
 
     html! {
         <div class="cv">
