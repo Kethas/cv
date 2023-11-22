@@ -291,7 +291,7 @@ pub fn header() -> Html {
         <div class="header appear3 screen-only">
             <div><a href="https://github.com/Kethas/cv/">{ "Source Code on Github" }</a></div>
             <span class="bullet" />
-            <div><a href="#">{ "View my Portfolio" }</a></div>
+            <div><a href="https://portfolio.asphyx.dev">{ "View my Portfolio" }</a></div>
         </div>
     }
 }
