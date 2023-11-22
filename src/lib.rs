@@ -3,7 +3,7 @@ use yew::{prelude::*, props};
 #[function_component(App)]
 pub fn app() -> Html {
     html! {
-        <main>
+        <div>
             <div class="page">
                 <div class="page-content">
                     <Cv />
@@ -11,7 +11,7 @@ pub fn app() -> Html {
             </div>
 
             <Footer />
-        </main>
+        </div>
     }
 }
 
@@ -38,7 +38,7 @@ pub fn cv() -> Html {
     };
 
     html! {
-        <div class="cv">
+        <main id="cv">
             <div class="col">
                 <Intro />
                 <div class={ if !is_mobile { "appear2" } else { "" } }>
@@ -54,7 +54,7 @@ pub fn cv() -> Html {
                     <Projects ..props />
                 </div>
             </div>
-        </div>
+        </main>
     }
 }
 

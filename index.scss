@@ -39,7 +39,7 @@ body {
     height: auto;
   }
 
-  .cv {
+  #cv {
     display: block !important;
     gap: 0;
   }
@@ -196,7 +196,7 @@ body {
   padding: 1cm 0.1cm;
 }
 
-.cv {
+#cv {
   display: flex;
   gap: 0.25cm;
 

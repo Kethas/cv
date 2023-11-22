@@ -14,9 +14,9 @@
     <link href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet'>
 
-    <script>
+    <script defer>
       // this has to be javascript otherwise it's a chicken and egg game in rust...
-      setTimeout(() => {
+      function setMobileTransitions() {
         let elems = document.getElementsByClassName("zero-opacity");
         if (!elems) {
           return;
@@ -38,7 +38,19 @@
 
         
         for (elem of elems) observer.observe(elem);
-      }, 500);
+      }
+
+      function checkBodyStatus() {
+          if (document.body && document.body.childNodes.length > 0 && document.getElementById("cv")) {
+              setTimeout(() => {
+                  setMobileTransitions();
+              }, 100);
+          } else {
+              setTimeout(checkBodyStatus, 50);
+          }
+      }
+
+      document.addEventListener("DOMContentLoaded", checkBodyStatus)
     </script>
   </head>
 </html>
