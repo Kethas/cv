@@ -68,16 +68,27 @@ body {
     font-size: 4.5vw !important;
   }
 
-  .footer {
-    display: block !important;
-    font-size: 4mm;
+  .header {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.25mm;
     margin: auto;
-    width: 50%;
-    margin-bottom: 1cm;
+    width: 70%;
+    margin-top: 0.3cm !important;
+    margin-bottom: -1.1cm !important;
     text-align: center;
+
+    div {
+      padding: 3mm;
+      border-radius: 5mm; 
+      box-sizing: border-box;
+      background-color: lightgray;
+    }
 
     span.bullet:after {
       content: "" !important;
+      display: none;
+
     }
   }
 
@@ -285,12 +296,12 @@ p {
   margin-top: 2mm;
 }
 
-.footer {
+.header {
   display: flex;
   justify-content: center;
 
   font-size: 5mm;
-  margin-bottom: 1cm;
+  margin-top: 1cm;
 
   .bullet:after {
     margin-left: 3mm;
