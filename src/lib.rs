@@ -143,12 +143,6 @@ pub fn skills(props: &MobileProps) -> Html {
                             <li>{ "Python" }</li>
                         </ul>
                     </div>
-                    <div>
-                        <h2>{ "Cloud Platforms" }</h2>
-                        <ul class="skills-list">
-                            <li>{ "Heroku" }</li>
-                        </ul>
-                    </div>
                 </div>
                 <div class="skills-col">
                     <div>
@@ -165,6 +159,12 @@ pub fn skills(props: &MobileProps) -> Html {
                         <ul class="skills-list">
                             <li>{ "MongoDB" }</li>
                             <li>{ "SQL" }</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>{ "Cloud Platforms" }</h2>
+                        <ul class="skills-list">
+                            <li>{ "Heroku" }</li>
                         </ul>
                     </div>
                 </div>
