@@ -102,13 +102,15 @@ pub fn about_me(props: &MobileProps) -> Html {
                     "I began programming at the age of 12, encouraged by my brothers though driven by my own curiosity. \
                     When computer science and programming classes were introduced in my school, I had already gained proficiency in Java and Lua through self-learning."
                 }
-                <br />
+            </p>
+            <p>
                 {
                     "My approach to acquiring new skills is rooted in a deep curiosity and a passion for learning. \
                     Over time, I've independently explored various programming languages, frameworks, and paradigms (as seen below), allowing me to develop the ability to quickly adapt to new challenges. \
                     This adaptability extends beyond the technical realm and includes areas such as hardware, computer graphics, and interpersonal skills."
                 }
-                <br />
+            </p>
+            <p>
                 {
                     "My primary goal is to contribute positively to the team and work environment. \
                     I'm genuinely motivated and committed to personal growth, always seeking opportunities to learn, reflect, and enhance my abilities."
