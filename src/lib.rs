@@ -3,7 +3,7 @@ use yew::{prelude::*, props};
 #[function_component(App)]
 pub fn app() -> Html {
     html! {
-        <div>
+        <div class="container">
             <Header />
 
             <div class="page">
@@ -83,9 +83,10 @@ pub fn contact_info(props: &MobileProps) -> Html {
             <div class="contact-datum">{ "+45 91 44 49 12" }</div>
             <div class="contact-datum">{ "Copenhagen, Denmark" }</div>
 
-            <div class="contact-datum"><a href="https://www.linkedin.com/in/Kethas">{ "LinkedIn" } <span class="link">{ "(https://www.linkedin.com/in/Kethas)" }</span></a></div>
-            <div class="contact-datum"><a href="https://github.com/Kethas">{ "GitHub" } <span class="link">{ "(https://github.com/Kethas)" }</span></a></div>
-            <div class="contact-datum print-only"><a href="https://portfolio.asphyx.dev">{ "Portfolio" }<span class="link">{ "(https://portfolio.asphyx.dev)" }</span></a></div>
+            <div class="contact-datum"><a href="https://www.linkedin.com/in/Kethas">{ "LinkedIn" } <span class="link">{ "(linkedin.com/in/Kethas)" }</span></a></div>
+            <div class="contact-datum"><a href="https://github.com/Kethas">{ "GitHub" } <span class="link">{ "(github.com/Kethas)" }</span></a></div>
+            <div class="contact-datum print-only"><a href="https://cv.asphyx.dev">{ "View CV Online" } <span class="link">{ "(cv.asphyx.dev)" }</span></a></div>
+            <div class="contact-datum print-only"><a href="https://portfolio.asphyx.dev">{ "View Portfolio Online" }<span class="link">{ "(portfolio.asphyx.dev)" }</span></a></div>
 
 
         </div>
@@ -273,6 +274,23 @@ pub fn projects(props: &MobileProps) -> Html {
                     <li>
                     {
                         "Utilized Rust's expressive syntax and memory safety features to explore my passion towards programming languages and created a reliable and maintainable parser.   "
+                    }
+                    </li>
+                </ul>
+            </div>
+
+            <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
+                <h2>{ "CV and Portfolio" }</h2>
+                <div class="subtitle">{ "Animated webpages showcasing my skills and projects" }</div>
+                <ul class="bullet-points">
+                    <li>
+                    {
+                        "Created this CV and its accompanying portfolio as static webpages from conception to a finished product within a week."
+                    }
+                    </li>
+                    <li>
+                    {
+                        "Learned to master HTML and CSS and CSS animations and solved challenging issues that arose due to using Rust for web."
                     }
                     </li>
                 </ul>
