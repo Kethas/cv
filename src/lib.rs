@@ -200,28 +200,66 @@ pub fn experience(props: &MobileProps) -> Html {
             <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
                 <h2>{ "Freelance Software Developer \u{2014} International Clients" }</h2>
                 <div class="subtitle">{ "April 2021 - Present / Remote / Self-Employed" }</div>
-                <ul class="bullet-points">
-                    <li>
-                    {
-                        "Successfully completed a variety of projects as a freelance software developer, collaborating with international clients and consistently receiving great reviews for delivering high-quality solutions."
-                    }
-                    </li>
-                    <li>
-                    {
-                        "Demonstrated versatility and adaptability by working on diverse projects, such as building a smart contract for cryptocurrencies, developing platform-specific applications for both Mac and Windows by utilizing a cross-platform code base in Rust and showcasing my ability to modify existing Rust codebases to meet specific project requirements."
-                    }
-                    </li>
-                    <li>
-                    {
-                        "Leveraged strong problem-solving and communication skills to understand client requirements, provide technical expertise, and deliver high-quality solutions."
-                    }
-                    </li>
-                    <li>
-                    {
-                        "Demonstrated self-motivation and a proactive approach in managing projects independently, including task prioritization, time management, and meeting project deadlines."
-                    }
-                    </li>
-                </ul>
+                <p>
+                {
+                    "During my time working as a Freelance Software Developer, I have completed many projects for dozens of clients,
+                    receiving overwhelmingly positive reviews for the stellar products I had submitted. 
+                    I worked closely with my clients, understanding the requirements of their projects, 
+                    and making sure that the end product will be as close to their image of it as I can produce. 
+                    Many times the scope of the project would include learning the technologies needed to an expert level, 
+                    and designing the front- and back-end as well as implementing them."
+                }
+                </p>
+                <h3>
+                {
+                    "Customization of Open Source software for various clients"
+                }
+                </h3>
+                <p>
+                {
+                    "Many clients come to me asking me to edit open source repositories.
+                    This amounts to adding features or changing existing ones as well as 
+                    rebranding applications (within the scope of the law). 
+                    This required me to be able to quickly adapt to new codebases 
+                    and their inner workings to be able to successfully add modifications 
+                    without resorting to hacks or workarounds.
+                    "
+                }
+                </p>
+
+                <h3>
+                {
+                    "Translation of an Ethereum Solidity contract into Aptos Move"
+                }
+                </h3>
+                <p>
+                {
+                    "One of the projects I was tasked with was the translation of a rather large
+                    Solidity contract for Ethereum into Aptos Move. 
+                    At the time of accepting the offer, I had no experience with either Solidity nor Move. 
+                    Though I was inexperienced, I ended up researching both languages and their blockchains 
+                    in depth and by the time I had submitted the new contract's code, I was an expert in the 
+                    minutiae of Ethereum and Aptos and had detailed to the customer every difference between 
+                    the two contracts and its reasoning.
+                    "
+                }
+                </p>
+
+                <h3>
+                {
+                    "Development of various terminal/background apps using OS specific APIs for Windows, Linux, and MacOS"
+                }
+                </h3>
+                <p>
+                </p>
+
+                <h3>
+                {
+                    "Contribution to Open Source project 'egui.info'"
+                }
+                </h3>
+                <p>
+                </p>
             </div>
         </>
     }
@@ -236,64 +274,44 @@ pub fn projects(props: &MobileProps) -> Html {
             <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
                 <h2>{ "Moinkroft" }</h2>
                 <div class="subtitle">{ "Minecraft Clone written in Rust + WGPU" }</div>
-                <ul class="bullet-points">
-                    <li>
-                    {
-                        "Implemented key game mechanics, including terrain generation, player movement, and interaction with game objects."
-                    }
-                    </li>
-                    <li>
-                    {
-                        "Utilized Rust's strong memory safety features to ensure stability and performance."
-                    }
-                    </li>
-                </ul>
+                <p>
+                {
+                    "Implemented key game mechanics, including terrain generation, player movement, and interaction with game objects.
+                    Utilized Rust's strong memory safety features to ensure stability and performance."
+                }
+                </p>
             </div>
 
             <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
                 <h2>{ "RailsPlus" }</h2>
                 <div class="subtitle">{ "Minecraft Mod with over 150 000 downloads" }</div>
-                <ul class="bullet-points">
-                    <li>
-                    {
-                        "Created RailsPlus in 2 weeks during high school, a Minecraft Mod written in Java adding new types of interactable rails to the game."
-                    }
-                    </li>
-                </ul>
+                <p>
+                {
+                    "Created RailsPlus in 2 weeks during high school, a Minecraft Mod written in Java adding new types of interactable rails to the game."
+                }
+                </p>
             </div>
 
             <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
                 <h2>{ "Psi" }</h2>
                 <div class="subtitle">{ "User Friendly parser written in Rust" }</div>
-                <ul class="bullet-points">
-                    <li>
-                    {
-                        "Developed Psi, a parser prioritizing ease of use over efficiency."
-                    }
-                    </li>
-                    <li>
-                    {
-                        "Utilized Rust's expressive syntax and memory safety features to explore my passion towards programming languages and created a reliable and maintainable parser.   "
-                    }
-                    </li>
-                </ul>
+                <p>
+                {
+                    "Developed Psi, a parser prioritizing ease of use over efficiency.
+                    Utilized Rust's expressive syntax and memory safety features to explore my passion towards programming languages and created a reliable and maintainable parser.   "
+                }
+                </p>
             </div>
 
             <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
                 <h2>{ "CV and Portfolio" }</h2>
                 <div class="subtitle">{ "Animated webpages showcasing my skills and projects" }</div>
-                <ul class="bullet-points">
-                    <li>
-                    {
-                        "Created this CV and its accompanying portfolio as static webpages from conception to a finished product within a week."
-                    }
-                    </li>
-                    <li>
-                    {
-                        "Learned to master HTML and CSS and CSS animations and solved challenging issues that arose due to using Rust for web."
-                    }
-                    </li>
-                </ul>
+                <p>
+                {
+                    "Created this CV and its accompanying portfolio as static webpages from conception to a finished product within a week.
+                    Learned to master HTML and CSS and CSS animations and solved challenging issues that arose due to using Rust for web."
+                }
+                </p>
             </div>
         </>
     }

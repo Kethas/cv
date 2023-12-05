@@ -63,10 +63,14 @@ body {
   }
 
   h1 {
-    font-size: 1.8rem !important;
+    font-size: 1.7rem !important;
   }
 
   h2 {
+    font-size: 1.4rem !important;
+  }
+
+  h3 {
     font-size: 1.3rem !important;
   }
 
@@ -305,6 +309,14 @@ h2 {
   text-transform: uppercase;
   color: $blue-accent;
   font-size: 4.5mm;
+  font-family: 'Calibri', sans-serif;
+  margin-top: 1mm;
+  margin-bottom: 0mm;
+}
+
+h3 {
+  color: $blue-accent;
+  font-size: 4mm;
   font-family: 'Calibri', sans-serif;
   margin-top: 1mm;
   margin-bottom: 0mm;
