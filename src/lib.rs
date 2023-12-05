@@ -45,14 +45,14 @@ pub fn cv() -> Html {
                 <div class={ if !is_mobile { "appear2" } else { "" } }>
                     <ContactInfo ..props />
                     <AboutMe ..props />
-                    <Skills ..props />
-                    <Education  ..props />
+                    <Projects ..props />
                 </div>
             </div>
             <div class="col">
                 <div class={ if !is_mobile { "appear3" } else { "" } }>
                     <Experience ..props />
-                    <Projects ..props />
+                    <Skills ..props />
+                    <Education  ..props />
                 </div>
             </div>
         </main>
@@ -100,20 +100,20 @@ pub fn about_me(props: &MobileProps) -> Html {
             <h1>{ "About Me" }</h1>
             <p>
                 {
-                    "I began programming at the age of 12, encouraged by my brothers though driven by my own curiosity. \
+                    "I began programming at the age of 12, encouraged by my brothers though driven by my own curiosity.
                     When computer science and programming classes were introduced in my school, I had already gained proficiency in Java and Lua through self-learning."
                 }
             </p>
             <p>
                 {
-                    "My approach to acquiring new skills is rooted in a deep curiosity and a passion for learning. \
-                    Over time, I've independently explored various programming languages, frameworks, and paradigms (as seen below), allowing me to develop the ability to quickly adapt to new challenges. \
+                    "My approach to acquiring new skills is rooted in a deep curiosity and a passion for learning.
+                    Over time, I've independently explored various programming languages, frameworks, and paradigms (as seen below), allowing me to develop the ability to quickly adapt to new challenges. 
                     This adaptability extends beyond the technical realm and includes areas such as hardware, computer graphics, and interpersonal skills."
                 }
             </p>
             <p>
                 {
-                    "My primary goal is to contribute positively to the team and work environment. \
+                    "My primary goal is to contribute positively to the team and work environment.
                     I'm genuinely motivated and committed to personal growth, always seeking opportunities to learn, reflect, and enhance my abilities."
                 }
             </p>
@@ -200,6 +200,8 @@ pub fn experience(props: &MobileProps) -> Html {
             <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
                 <h2>{ "Freelance Software Developer \u{2014} International Clients" }</h2>
                 <div class="subtitle">{ "April 2021 - Present / Remote / Self-Employed" }</div>
+            </div>
+            <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
                 <p>
                 {
                     "During my time working as a Freelance Software Developer, I have completed many projects for dozens of clients,
@@ -210,6 +212,8 @@ pub fn experience(props: &MobileProps) -> Html {
                     and designing the front- and back-end as well as implementing them."
                 }
                 </p>
+            </div>
+            <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
                 <h3>
                 {
                     "Customization of Open Source software for various clients"
@@ -226,7 +230,8 @@ pub fn experience(props: &MobileProps) -> Html {
                     "
                 }
                 </p>
-
+            </div>
+            <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
                 <h3>
                 {
                     "Translation of an Ethereum Solidity contract into Aptos Move"
@@ -244,21 +249,31 @@ pub fn experience(props: &MobileProps) -> Html {
                     "
                 }
                 </p>
-
-                <h3>
-                {
-                    "Development of various terminal/background apps using OS specific APIs for Windows, Linux, and MacOS"
-                }
-                </h3>
-                <p>
-                </p>
-
+            </div>
+            // <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
+            //     <h3>
+            //     {
+            //         "Development of various terminal/background apps using OS specific APIs for Windows, Linux, and MacOS"
+            //     }
+            //     </h3>
+            //     <p>
+            //     {
+            //         "Many apps I have developed had led me to learn and research OS specific APIs."
+            //     }
+            //     </p>
+            // </div>
+            <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
                 <h3>
                 {
                     "Contribution to Open Source project 'egui.info'"
                 }
                 </h3>
                 <p>
+                {
+                    "As part of my freelancing, I have contributed the open source project 'egui.info'.
+                    I learned a lot about collaboration and using Git and submitting Pull Requests on GitHub
+                    whilst being able to further my passion for Rust in a way that contributes to society."
+                }
                 </p>
             </div>
         </>
