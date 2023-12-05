@@ -1,10 +1,8 @@
 $blue-accent: rgb(32, 121, 199);
 $orange-accent: rgb(230, 145, 56);
 
-$font-size: 3.75mm;
-
 html {
-  font-size: 3.75mm;
+  font-size: 3.25mm;
   font-family: 'Bitter', serif;
   color: #222;
 }
@@ -88,7 +86,7 @@ body {
 
     div {
       padding: 3mm;
-      border-radius: 5mm; 
+      border-radius: 5mm;
       box-sizing: border-box;
       background-color: lightgray;
     }
@@ -118,7 +116,7 @@ body {
     justify-content: center;
 
     background: linear-gradient(to bottom right, rgb(100, 130, 220), rgb(50, 90, 200));
-  } 
+  }
 
   .page {
     width: 21cm;
@@ -127,9 +125,9 @@ body {
     margin: 1cm 0cm;
     background: white;
     border: 0.1mm solid black;
-  } 
+  }
 
-  
+
 }
 
 @media screen {
@@ -137,6 +135,7 @@ body {
     from {
       width: 0;
     }
+
     to {
       width: 100%;
     }
@@ -163,6 +162,7 @@ body {
     from {
       opacity: 0%;
     }
+
     to {
       opacity: 100%;
     }
@@ -187,7 +187,7 @@ body {
     animation-delay: 1.6s;
     animation-fill-mode: forwards;
   }
- 
+
 }
 
 @media print {
@@ -200,7 +200,8 @@ body {
     height: 29.7cm;
   }
 
-  a, a:visited {
+  a,
+  a:visited {
     color: inherit !important;
     text-decoration: none;
   }
@@ -251,7 +252,8 @@ body {
     content: " ";
   }
 
-  a, a:visited {
+  a,
+  a:visited {
     color: darken($blue-accent, 10%);
   }
 }
@@ -271,7 +273,7 @@ ul.skills-list {
   margin-bottom: 0;
   list-style: none;
   padding-left: 0;
-  
+
   li {
     margin-bottom: 0.4mm;
   }
@@ -335,7 +337,8 @@ p {
     content: "\2022";
   }
 
-  a, a:visited {
+  a,
+  a:visited {
     color: #222
   }
 }
