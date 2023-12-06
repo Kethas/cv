@@ -131,16 +131,17 @@ pub fn skills(props: &MobileProps) -> Html {
                     <div>
                         <h2>{ "Languages" }</h2>
                         <ul class="skills-list">
-                            <li>{ "Lua" }</li>
-                            <li>{ "Java" }</li>
-                            <li>{ "C#" }</li>
-                            <li>{ "C/C++" }</li>
-                            <li>{ "Rust" }</li>
-                            <li>{ "JavaScript/\u{200B}TypeScript" }</li>
-                            <li>{ "HTML" }</li>
-                            <li>{ "CSS" }</li>
-                            <li>{ "NodeJS" }</li>
-                            <li>{ "Python" }</li>
+                            <li>{ "Lua (10 Yrs)" }</li>
+                            <li>{ "Java (10 Yrs)" }</li>
+                            <li>{ "C# (8 Yrs)" }</li>
+                            <li>{ "JavaScript/\u{200B}TypeScript (8\u{202F}Yrs)" }</li>
+                            <li>{ "HTML (8 Yrs)" }</li>
+                            <li>{ "CSS (8 Yrs)" }</li>
+                            <li>{ "C/C++ (7 Yrs)" }</li>
+                            <li>{ "NodeJS (6 Yrs)" }</li>
+                            <li>{ "Python (6 Yrs)" }</li>
+                            <li>{ "Rust (5 Yrs)" }</li>
+
                         </ul>
                     </div>
                 </div>
@@ -204,29 +205,12 @@ pub fn experience(props: &MobileProps) -> Html {
             <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
                 <p>
                 {
-                    "During my time working as a Freelance Software Developer, I have completed many projects for dozens of clients,
-                    receiving overwhelmingly positive reviews for the stellar products I had submitted. 
-                    I worked closely with my clients, understanding the requirements of their projects, 
-                    and making sure that the end product will be as close to their image of it as I can produce. 
-                    Many times the scope of the project would include learning the technologies needed to an expert level, 
-                    and designing the front- and back-end as well as implementing them."
-                }
-                </p>
-            </div>
-            <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
-                <h3>
-                {
-                    "Customization of Open Source software for various clients"
-                }
-                </h3>
-                <p>
-                {
-                    "Many clients come to me asking me to edit open source repositories.
-                    This amounts to adding features or changing existing ones as well as 
-                    rebranding applications (within the scope of the law). 
-                    This required me to be able to quickly adapt to new codebases 
-                    and their inner workings to be able to successfully add modifications 
-                    without resorting to hacks or workarounds.
+                    "As a Freelance Software Developer, I successfully delivered many complex projects for a diverse international clientele,
+                    earning consistently positive feedback for exceptional quality, timely execution, and robust implementation. 
+                    Collaborating closely with clients honed my communicative and entrepreneurial skills, 
+                    creating solutions that precisely matched their visions and requirements. 
+                    Often projects required expert level understanding of technologies I was not familiar with at the time, which I showed great dedication in learning and improving my professional skills
+                    managing to complete these projects, while designing functional front- and back-end expertly as expected by my clientele.
                     "
                 }
                 </p>
@@ -234,18 +218,31 @@ pub fn experience(props: &MobileProps) -> Html {
             <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
                 <h3>
                 {
-                    "Translation of an Ethereum Solidity contract into Aptos Move"
+                    "Customization of Open Source GitHub software in Rust"
                 }
                 </h3>
                 <p>
                 {
-                    "One of the projects I was tasked with was the translation of a rather large
-                    Solidity contract for Ethereum into Aptos Move. 
-                    At the time of accepting the offer, I had no experience with either Solidity nor Move. 
-                    Though I was inexperienced, I ended up researching both languages and their blockchains 
-                    in depth and by the time I had submitted the new contract's code, I was an expert in the 
-                    minutiae of Ethereum and Aptos and had detailed to the customer every difference between 
-                    the two contracts and its reasoning.
+                    "I skillfully customized existing open-source repositories using Rust, expertly adapting and augmenting features within their codebase
+                    while preserving functional integrity. A crucial aspect of my work involved enhancing the IPC of the program,
+                    ensuring a seamless transition without compromising its original functionality. To elevate user engagement and satisfaction, I revamped the UI design using HTML, CSS, and domain-specific languages like TIScript, fulfilling my client's request for a complete application rebrand.
+                    "
+                }
+                </p>
+            </div>
+            <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
+                <h3>
+                {
+                    "Translation of Ethereum contract into Aptos Move"
+                }
+                </h3>
+                <p>
+                {
+                    "I undertook the translation of a substantial Ethereum smart contract from Solidity to Aptos Move,
+                    simultaneously acquiring proficiency in both languages and expanding my technical expertise in cryptocurrency operations. 
+                    Upon completion, I gained comprehensive knowledge in these domains, delving into the intricacies of their complex blockchains and attaining expert-level insights. 
+                    I delivered substantial value to my client by providing a detailed list of translation differences between the two contracts.
+                    
                     "
                 }
                 </p>
@@ -270,9 +267,10 @@ pub fn experience(props: &MobileProps) -> Html {
                 </h3>
                 <p>
                 {
-                    "As part of my freelancing, I have contributed the open source project 'egui.info'.
-                    I learned a lot about collaboration and using Git and submitting Pull Requests on GitHub
-                    whilst being able to further my passion for Rust in a way that contributes to society."
+                    "I actively contributed to the open-source project 'egui.info' by collaborating through Git,
+                    submitting Pull Requests on GitHub, and successfully upgrading the project's dependency version.
+                    Utilizing Rust, I meticulously enhanced and fine-tuned the entire collection of examples, elevating the overall quality of the project.
+                    "
                 }
                 </p>
             </div>
@@ -291,8 +289,12 @@ pub fn projects(props: &MobileProps) -> Html {
                 <div class="subtitle">{ "Minecraft Clone written in Rust + WGPU" }</div>
                 <p>
                 {
-                    "Implemented key game mechanics, including terrain generation, player movement, and interaction with game objects.
-                    Utilized Rust's strong memory safety features to ensure stability and performance."
+                    "Implemented key game mechanics, including terrain generation, player movement, and interaction with game objects."
+                }
+                </p>
+                <p>
+                {
+                    "Utilized Rust's strong memory safety features to ensure stability and performance."
                 }
                 </p>
             </div>
@@ -312,8 +314,12 @@ pub fn projects(props: &MobileProps) -> Html {
                 <div class="subtitle">{ "User Friendly parser written in Rust" }</div>
                 <p>
                 {
-                    "Developed Psi, a parser prioritizing ease of use over efficiency.
-                    Utilized Rust's expressive syntax and memory safety features to explore my passion towards programming languages and created a reliable and maintainable parser.   "
+                    "Developed Psi, a parser prioritizing ease of use over efficiency."
+                }
+                </p>
+                <p>
+                {
+                    "Utilized Rust's expressive syntax and memory safety features to explore my passion towards programming languages and created a reliable and maintainable parser.   "
                 }
                 </p>
             </div>
@@ -323,8 +329,12 @@ pub fn projects(props: &MobileProps) -> Html {
                 <div class="subtitle">{ "Animated webpages showcasing my skills and projects" }</div>
                 <p>
                 {
-                    "Created this CV and its accompanying portfolio as static webpages from conception to a finished product within a week.
-                    Learned to master HTML and CSS and CSS animations and solved challenging issues that arose due to using Rust for web."
+                    "Created this CV and its accompanying portfolio as static webpages from conception to a finished product within a week."
+                }
+                </p>
+                <p>
+                {
+                    "Learned to master HTML and CSS and CSS animations and solved challenging issues that arose due to using Rust for web."
                 }
                 </p>
             </div>
