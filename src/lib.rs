@@ -42,25 +42,34 @@ pub fn cv() -> Html {
         <main id="cv">
             <Intro />
             <ContactInfo ..props />
-            <Experience ..props />
+
+            <div class="cols">
+                <div class="col flex3">
+                    <div class={ if !is_mobile { "appear2" } else { "" } }>
+                        <Experience ..props />
+                    </div>
+                </div>
+                <div class="col">
+                    <div class={ if !is_mobile { "appear2" } else { "" } }>
+                        <Skills ..props />
+                    </div>
+                </div>
+            </div>
+
 
             <div class="cols">
                 <div class="col">
                     <div class={ if !is_mobile { "appear3" } else { "" } }>
-                        <Skills ..props />
+                        <AboutMe ..props />
                         <Education  ..props />
                     </div>
                 </div>
-                <div class="col flex2">
+                <div class="col flex">
                     <div class={ if !is_mobile { "appear3" } else { "" } }>
                         <Projects ..props />
                     </div>
                 </div>
-                <div class="col">
-                    <div class={ if !is_mobile { "appear3" } else { "" } }>
-                        <AboutMe ..props />
-                    </div>
-                </div>
+
             </div>
 
 
@@ -140,7 +149,7 @@ pub fn skills(props: &MobileProps) -> Html {
         <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
             <h1>{ "Skills" }</h1>
             <div class="skills-container">
-                <div class="skills-col">
+                //<div class="skills-col">
                     <div>
                         <h2>{ "Languages" }</h2>
                         <ul class="skills-list">
@@ -151,14 +160,14 @@ pub fn skills(props: &MobileProps) -> Html {
                             <li>{ "HTML (8 Yrs)" }</li>
                             <li>{ "CSS (8 Yrs)" }</li>
                             <li>{ "C/C++ (7 Yrs)" }</li>
+                            <li>{ "Bash (7 Yrs)" }</li>
                             <li>{ "NodeJS (6 Yrs)" }</li>
                             <li>{ "Python (6 Yrs)" }</li>
                             <li>{ "Rust (5 Yrs)" }</li>
-
                         </ul>
                     </div>
-                </div>
-                <div class="skills-col">
+                //</div>
+                //<div class="skills-col">
                     <div>
                         <h2>{ "Frameworks" }</h2>
                         <ul class="skills-list">
@@ -181,7 +190,15 @@ pub fn skills(props: &MobileProps) -> Html {
                             <li>{ "Heroku" }</li>
                         </ul>
                     </div>
-                </div>
+                    <div>
+                        <h2>{ "IDEs" }</h2>
+                        <ul class="skills-list">
+                            <li>{ "Visual Studio Code" }</li>
+                            <li>{ "IntelliJ IDEA" }</li>
+                            <li>{ "CLion" }</li>
+                        </ul>
+                    </div>
+                //</div>
             </div>
         </div>
     }
@@ -208,7 +225,7 @@ pub fn education(props: &MobileProps) -> Html {
 #[function_component(Experience)]
 pub fn experience(props: &MobileProps) -> Html {
     html! {
-        <div class="appear2">
+        <>
             <h1 class={ if props.is_mobile { "zero-opacity" } else { "" } }>{ "Experience" }</h1>
 
             <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
@@ -330,7 +347,7 @@ pub fn experience(props: &MobileProps) -> Html {
                     </li>
                 </ul>
             </div>
-        </div>
+        </>
     }
 }
 
@@ -343,56 +360,74 @@ pub fn projects(props: &MobileProps) -> Html {
             <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
                 <h2>{ "Moinkroft" }</h2>
                 <div class="subtitle">{ "Minecraft Clone written in Rust + WGPU" }</div>
-                <p>
-                {
-                    "Implemented key game mechanics, including terrain generation, player movement, and interaction with game objects."
-                }
-                </p>
-                <p>
-                {
-                    "Utilized Rust's strong memory safety features to ensure stability and performance."
-                }
-                </p>
+                <ul class="bullet-points">
+                    <li>
+                    {
+                        "Implemented core game mechanics, including terrain generation, player movement, and interaction with game objects."
+                    }
+                    </li>
+                    <li>
+                    {
+                        "Utilized Rust's robust memory safety features for enhanced stability and performance."
+                    }
+                    </li>
+                </ul>
             </div>
 
             <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
                 <h2>{ "RailsPlus" }</h2>
                 <div class="subtitle">{ "Minecraft Mod with over 150 000 downloads" }</div>
-                <p>
-                {
-                    "Created RailsPlus in 2 weeks during high school, a Minecraft Mod written in Java adding new types of interactable rails to the game."
-                }
-                </p>
+                <ul class="bullet-points">
+                    <li>
+                    {
+                        "Developed \"RailsPlus\" Minecraft Mod in Java within a two-week timeframe during high school."
+                    }
+                    </li>
+                    <li>
+                    {
+                        "Introduced new types of interactable rails to enhance gameplay."
+                    }
+                    </li>
+                </ul>
             </div>
 
             <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
                 <h2>{ "Psi" }</h2>
                 <div class="subtitle">{ "User Friendly parser written in Rust" }</div>
-                <p>
-                {
-                    "Developed Psi, a parser prioritizing ease of use over efficiency."
-                }
-                </p>
-                <p>
-                {
-                    "Utilized Rust's expressive syntax and memory safety features to explore my passion towards programming languages and created a reliable and maintainable parser.   "
-                }
-                </p>
+                <ul class="bullet-points">
+                    <li>
+                    {
+                        "Developed Psi, a parser prioritizing ease of use over efficiency."
+                    }
+                    </li>
+                    <li>
+                    {
+                        "Leveraged Rust's expressive syntax and memory safety features to fashion a reliable and maintainable parser."
+                    }
+                    </li>
+                </ul>
             </div>
 
             <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
                 <h2>{ "CV and Portfolio" }</h2>
                 <div class="subtitle">{ "Animated webpages showcasing my skills and projects" }</div>
-                <p>
-                {
-                    "Created this CV and its accompanying portfolio as static webpages from conception to a finished product within a week."
-                }
-                </p>
-                <p>
-                {
-                    "Learned to master HTML and CSS and CSS animations and solved challenging issues that arose due to using Rust for web."
-                }
-                </p>
+                <ul class="bullet-points">
+                    <li>
+                    {
+                        "Developed CV and portfolio as static webpages from conception to completion in one week."
+                    }
+                    </li>
+                    <li>
+                    {
+                        "Mastered HTML, CSS, and CSS animations to enhance web design."         
+                    }
+                    </li>
+                    <li>
+                    {
+                        "Addressed challenges related to using Rust for web development, demonstrating problem-solving skills."         
+                    }
+                    </li>
+                </ul>
             </div>
         </>
     }

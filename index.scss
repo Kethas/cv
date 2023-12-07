@@ -82,10 +82,13 @@ body {
 
   h2 {
     font-size: 1.4rem !important;
+    font-weight: normal !important;
   }
 
   h3 {
     font-size: 1.3rem !important;
+    font-weight: normal !important;
+
   }
 
   div.subtitle {
@@ -263,15 +266,20 @@ body {
 
 .cols {
   display: flex;
-  gap: 0.25cm;
+  gap: 1cm;
+  margin-bottom: 5mm;
 }
 
 .col {
   flex: 1;
 }
 
-.col.flex2 {
+.col.flex {
   flex: 1.35;
+}
+
+.col.flex3 {
+  flex: 3;
 }
 
 .intro {
@@ -334,16 +342,6 @@ body {
   }
 }
 
-
-.skills-container {
-  display: flex;
-  width: 100%;
-}
-
-.skills-col {
-  width: 50%;
-}
-
 ul.skills-list {
   margin-top: 1mm;
   margin-bottom: 0;
@@ -358,8 +356,9 @@ ul.skills-list {
 ul.bullet-points {
   margin-top: 0;
   margin-bottom: 1mm;
-  list-style-position: inside;
-  padding-left: 0;
+  list-style-type: circle;
+  list-style-position: outside;
+  padding-left: 4mm;
 
   li {
     margin-bottom: 0;
@@ -378,7 +377,7 @@ h1 {
   font-size: 5mm;
   font-family: 'Calibri', sans-serif;
   font-weight: normal;
-  margin-top: 4mm;
+  margin-top: 1mm;
   margin-bottom: 0mm;
 }
 
@@ -411,7 +410,7 @@ div.subtitle {
 }
 
 p {
-  margin-bottom: 0;
+  margin-bottom: 1.5mm;
   margin-top: 0.9mm;
 }
 
