@@ -58,6 +58,20 @@ body {
     font-size: 6.5vw !important;
   }
 
+  .intro,
+  .name-container,
+  .headline-container {
+    display: block !important;
+  }
+
+  .contact-data {
+    margin: 0 0 !important;
+    padding: 1mm 0 !important;
+    padding-bottom: 2mm !important;
+    box-shadow: 0 0 0 100vmax #e5e5e5;
+    clip-path: inset(0 -100vmax);
+  }
+
   .contact-datum span.link {
     display: none !important;
   }
@@ -102,6 +116,10 @@ body {
     }
   }
 
+  .cols {
+    display: block !important;
+  }
+
   .appear3 {
     animation-delay: 0s !important;
   }
@@ -135,6 +153,17 @@ body {
 }
 
 @media screen {
+
+  @keyframes type-left {
+    from {
+      clip-path: inset(0% 100% 0% 0%);
+    }
+
+    to {
+      clip-path: inset(0);
+    }
+  }
+
   @keyframes type {
     from {
       width: 0;
@@ -145,15 +174,14 @@ body {
     }
   }
 
-  .appear0 {
-    width: 0%;
+  .appear0-left {
     white-space: nowrap;
     overflow: hidden;
-    animation: type 1.3s steps(120, end);
+    animation: type-left 1.3s steps(120, end);
     animation-fill-mode: forwards;
   }
 
-  .appear1 {
+  .appear0 {
     width: 0%;
     white-space: nowrap;
     overflow: hidden;
@@ -174,6 +202,14 @@ body {
 
   .zero-opacity {
     opacity: 0%;
+  }
+
+  .appear1 {
+    opacity: 0%;
+
+    animation: opac 0.85s steps(120, end);
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
   }
 
   .appear2 {
@@ -222,28 +258,64 @@ body {
 }
 
 #cv {
-  display: flex;
-  gap: 0.25cm;
-
   padding: 0.2cm 1cm;
 }
 
+.cols {
+  display: flex;
+  gap: 0.25cm;
+}
+
 .col {
-  width: 100%;
+  flex: 1;
+}
+
+.col.flex2 {
+  flex: 1.35;
+}
+
+.intro {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 1cm;
+}
+
+
+.name-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: right;
 }
 
 .name {
-
-  font-size: 2cm;
+  font-size: 1cm;
   font-family: 'Merriweather', serif;
 
   color: $blue-accent;
 }
 
+.headline-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: left;
+}
+
 .headline {
   color: #444;
-  font-size: 5mm;
+  font-size: 4.5mm;
   font-family: 'Vollkorn', serif;
+}
+
+.contact-data {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  background-color: #e5e5e5;
+  margin: 0 -5.9%;
+  padding: 1mm 5.9%;
 }
 
 .contact-datum {

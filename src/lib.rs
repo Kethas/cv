@@ -40,21 +40,30 @@ pub fn cv() -> Html {
 
     html! {
         <main id="cv">
-            <div class="col">
-                <Intro />
-                <div class={ if !is_mobile { "appear2" } else { "" } }>
-                    <ContactInfo ..props />
-                    <AboutMe ..props />
-                    <Projects ..props />
+            <Intro />
+            <ContactInfo ..props />
+            <Experience ..props />
+
+            <div class="cols">
+                <div class="col">
+                    <div class={ if !is_mobile { "appear3" } else { "" } }>
+                        <Skills ..props />
+                        <Education  ..props />
+                    </div>
+                </div>
+                <div class="col flex2">
+                    <div class={ if !is_mobile { "appear3" } else { "" } }>
+                        <Projects ..props />
+                    </div>
+                </div>
+                <div class="col">
+                    <div class={ if !is_mobile { "appear3" } else { "" } }>
+                        <AboutMe ..props />
+                    </div>
                 </div>
             </div>
-            <div class="col">
-                <div class={ if !is_mobile { "appear3" } else { "" } }>
-                    <Experience ..props />
-                    <Skills ..props />
-                    <Education  ..props />
-                </div>
-            </div>
+
+
         </main>
     }
 }
@@ -68,17 +77,21 @@ pub fn cv() -> Html {
 #[function_component(Intro)]
 pub fn intro() -> Html {
     html! {
-        <>
-            <div class="name appear0">{ "Ilay Ron" }</div>
-            <div class="headline appear1">{ "Self-Taught Programmer" }</div>
-        </>
+        <div class="intro">
+            <div class="name-container">
+                <div class="name appear0-left">{ "Ilay Ron" }</div>
+            </div>
+            <div class="headline-container">
+                <div class="headline appear0">{ "Self-Taught Programmer" }</div>
+            </div>
+        </div>
     }
 }
 
 #[function_component(ContactInfo)]
 pub fn contact_info(props: &MobileProps) -> Html {
     html! {
-        <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
+        <div class={ if props.is_mobile { "zero-opacity contact-data" } else { "contact-data appear1" } }>
             <div class="contact-datum">{ "ilayron01@gmail.com" }</div>
             <div class="contact-datum">{ "+45 91 44 49 12" }</div>
             <div class="contact-datum">{ "Copenhagen, Denmark" }</div>
@@ -195,7 +208,7 @@ pub fn education(props: &MobileProps) -> Html {
 #[function_component(Experience)]
 pub fn experience(props: &MobileProps) -> Html {
     html! {
-        <>
+        <div class="appear2">
             <h1 class={ if props.is_mobile { "zero-opacity" } else { "" } }>{ "Experience" }</h1>
 
             <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
@@ -317,7 +330,7 @@ pub fn experience(props: &MobileProps) -> Html {
                     </li>
                 </ul>
             </div>
-        </>
+        </div>
     }
 }
 
