@@ -203,17 +203,31 @@ pub fn experience(props: &MobileProps) -> Html {
                 <div class="subtitle">{ "April 2021 - Present / Remote / Self-Employed" }</div>
             </div>
             <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
-                <p>
-                {
-                    "As a Freelance Software Developer, I successfully delivered many complex projects for a diverse international clientele,
-                    earning consistently positive feedback for exceptional quality, timely execution, and robust implementation. 
-                    Collaborating closely with clients honed my communicative and entrepreneurial skills, 
-                    creating solutions that precisely matched their visions and requirements. 
-                    Often projects required expert level understanding of technologies I was not familiar with at the time, which I showed great dedication in learning and improving my professional skills
-                    managing to complete these projects, while designing functional front- and back-end expertly as expected by my clientele.
-                    "
-                }
-                </p>
+                <ul class="bullet-points">
+                    <li>
+                    {
+                        "Delivered numerous complex projects for diverse international clientele, garnering positive feedback for exceptional quality, timely execution, and robust implementation."
+                    }
+                    </li>
+                    <li>
+                    {
+                        "Honed communicative and entrepreneurial skills through close collaboration with clients, ensuring solutions aligned with their visions and requirements.
+                        "
+                    }
+                    </li>
+                    <li>
+                    {
+                        "Demonstrated dedication to learning and improving professional skills, tackling projects that required expertise in unfamiliar technologies and masted them.
+                        "
+                    }
+                    </li>
+                    <li>
+                    {
+                        "Expertly designed functional front- and back-end components to meet and exceed client expectations.
+                        "
+                    }
+                    </li>
+                </ul>
             </div>
             <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
                 <h3>
@@ -221,14 +235,27 @@ pub fn experience(props: &MobileProps) -> Html {
                     "Customization of Open Source GitHub software in Rust"
                 }
                 </h3>
-                <p>
-                {
-                    "I skillfully customized existing open-source repositories using Rust, expertly adapting and augmenting features within their codebase
-                    while preserving functional integrity. A crucial aspect of my work involved enhancing the IPC of the program,
-                    ensuring a seamless transition without compromising its original functionality. To elevate user engagement and satisfaction, I revamped the UI design using HTML, CSS, and domain-specific languages like TIScript, fulfilling my client's request for a complete application rebrand.
-                    "
-                }
-                </p>
+
+                <ul class="bullet-points">
+                    <li>
+                    {
+                        "Customized open-source repositories using Rust, expertly adapting and augmenting features while maintaining functional integrity."
+                    }
+                    </li>
+                    <li>
+                    {
+                        "Enhanced the IPC for a seamless transition without compromising the original functionality of the program.
+                        "
+                    }
+                    </li>
+                    <li>
+                    {
+                        "Revamped UI design using HTML, CSS, and domain-specific languages (TIScript) to fulfill client's request for a complete application rebranding.
+                        "
+                    }
+                    </li>
+
+                </ul>
             </div>
             <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
                 <h3>
@@ -236,16 +263,27 @@ pub fn experience(props: &MobileProps) -> Html {
                     "Translation of Ethereum contract into Aptos Move"
                 }
                 </h3>
-                <p>
-                {
-                    "I undertook the translation of a substantial Ethereum smart contract from Solidity to Aptos Move,
-                    simultaneously acquiring proficiency in both languages and expanding my technical expertise in cryptocurrency operations. 
-                    Upon completion, I gained comprehensive knowledge in these domains, delving into the intricacies of their complex blockchains and attaining expert-level insights. 
-                    I delivered substantial value to my client by providing a detailed list of translation differences between the two contracts.
-                    
-                    "
-                }
-                </p>
+                <ul class="bullet-points">
+                    <li>
+                    {
+                        "Translated Ethereum smart contract from Solidity to Aptos Move, gaining proficiency in both languages and deepening expertise in cryptocurrency operations.
+                        "
+                    }
+                    </li>
+                    <li>
+                    {
+                        "Acquired comprehensive knowledge of complex blockchains, achieving expert-level insights in the domains, without much prior experience.
+                        "
+                    }
+                    </li>
+                    <li>
+                    {
+                        "Delivered substantial value to the client with a detailed list of translation differences between the two contracts.
+                        "
+                    }
+                    </li>
+
+                </ul>
             </div>
             // <div class={ if props.is_mobile { "zero-opacity" } else { "" } }>
             //     <h3>
@@ -265,14 +303,19 @@ pub fn experience(props: &MobileProps) -> Html {
                     "Contribution to Open Source project 'egui.info'"
                 }
                 </h3>
-                <p>
-                {
-                    "I actively contributed to the open-source project 'egui.info' by collaborating through Git,
-                    submitting Pull Requests on GitHub, and successfully upgrading the project's dependency version.
-                    Utilizing Rust, I meticulously enhanced and fine-tuned the entire collection of examples, elevating the overall quality of the project.
-                    "
-                }
-                </p>
+                <ul class="bullet-points">
+                    <li>
+                    {
+                        "Actively contributed to 'egui.info' open-source project by collaborating through Git, submitting Pull Requests on GitHub, and successfully upgrading project dependency version."
+                    }
+                    </li>
+                    <li>
+                    {
+                        "Utilized Rust to meticulously enhance and fine-tune the entire collection of examples, elevating overall project quality.
+                        "
+                    }
+                    </li>
+                </ul>
             </div>
         </>
     }
